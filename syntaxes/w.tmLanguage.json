@@ -1,0 +1,131 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "W",
+	"patterns": [
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#constants"
+		},
+		{
+			"include": "#entities"
+		},
+		{
+			"include": "#storage"
+		},
+		{
+			"include": "#strings"
+		}
+	],
+	"repository": {
+		"comments": {
+			"patterns": [
+				{
+					"name": "comment.block.w",
+					"begin": "```",
+					"end": "```"
+				},
+				{
+					"name": "comment.line.w",
+					"begin": "(`)",
+					"beginCaptures": {
+						"1": {
+							"name": "punctuation.definition.comment.w"
+						}
+					},
+					"end": "(`|$)",
+					"endCaptures": {
+						"1": {
+							"name": "punctuation.definition.comment.w"
+						}
+					}
+				}
+			]
+		},
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.control.w",
+					"match": "\\b(return|do|if|else|match|break|let|from|to|in|use|end)\\b"
+				},
+				{
+					"name": "keyword.operator.w",
+					"match": "(&&|\\|\\||==|>=|<=|>|<|=|::|\\+|\\-|\\*|\\/|&|\\.\\.)"
+				},
+				{
+					"name": "keyword.other.w",
+					"match": "\\b(compare|mut|printout|readin)\\b"
+				}
+			]
+		},
+		"constants": {
+			"patterns": [
+				{
+					"name": "constant.language.w",
+					"match": "\\B(\\@current)\\b"
+				},
+				{
+					"name": "constant.other.w",
+					"match": "\\b(True|False|Equal|Greater|Less)\\b"
+				},
+				{
+					"name": "constant.numeric.w",
+					"match": "\\b(((?:0(?:_?0)*|[1-9](?:_?[0-9])*))|(0[bB](?:_?[01])+)|(0[xX](?:_?[0-9a-fA-F])+)|(0[oO](?:_?[0-7])+))\\b"
+				}
+			]
+		},
+		"entities": {
+			"patterns": [
+				{
+					"match": "\\b([A-Za-z_]\\w*)\\(",
+					"captures": {
+						"1": {
+							"name": "entity.name.function.w"
+						}
+					}
+				},
+				{
+					"match": "([A-Za-z_]\\w*)(\\[([A-Za-z_]\\w*)\\])? (::)",
+					"captures": {
+						"1": {
+							"name": "entity.name.type.w"
+						},
+						"3": {
+							"name": "entity.name.type.w"
+						},
+						"4": {
+							"name": "keyword.operator.w"
+						}
+					}
+				},
+				{
+					"match": "([A-Za-z_]\\w*)\\[([A-Za-z_]\\w*)\\] (::)"
+				}
+			]
+		},
+		"storage": {
+			"patterns": [
+				{
+					"name": "storage.modifier.import.w",
+					"match": "\\b(use)\\b"
+				}
+			]
+		},
+		"strings": {
+			"name": "string.quoted.double.w",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.w",
+					"match": "\\\\."
+				}
+			]
+		}
+	},
+	"scopeName": "source.w"
+}

@@ -1,0 +1,25 @@
+{
+  "name": "w-language",
+  "displayName": "W Language",
+  "description": "Basic support of the W programming language.",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.71.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "w",
+      "aliases": ["W", "w"],
+      "extensions": [".w"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "w",
+      "scopeName": "source.w",
+      "path": "./syntaxes/w.tmLanguage.json"
+    }]
+  }
+}
