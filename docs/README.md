@@ -14,4 +14,4 @@ Normally, you just have to reload VS Code.
 
 ### Windows
 
-No idea what is VS Code extensions' path. Perhaps in `C:\Program Data\`? If you find it, just do the same as for Linux/macOS but using this path instead.
+No idea what VS Code extensions' path is. Perhaps in `C:\Program Data\`? If you find it, just do the same as for Linux/macOS but using this path instead.
