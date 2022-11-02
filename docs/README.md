@@ -9,9 +9,9 @@ Only support context-free syntax highlighting, btw.
 
 ### Linux/macOS
 
-Create a folder named `w.w-language-0.0.1` in `$HOME/.vscode/extensions/` and put the files inside.
+Create a folder named `w.w-language-0.0.1` in `$HOME/.vscode/extensions/` and put the files inside.  
 Normally, you just have to reload VS Code.
 
 ### Windows
 
-No idea what is VS Code extensions path. Perhaps in `C:\Program Data\`? If you find it, just do the same as for Linux/macOS but using this path instead.
+No idea what is VS Code extensions' path. Perhaps in `C:\Program Data\`? If you find it, just do the same as for Linux/macOS but using this path instead.
