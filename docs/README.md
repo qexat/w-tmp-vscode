@@ -9,6 +9,16 @@ Only support context-free syntax highlighting, btw.
 
 ### Linux/macOS
 
+#### Using the script
+
+Assuming that you have `ocaml` installed on your linux machine, run:
+
+```sh
+ocaml linux_install.ml
+```
+
+#### Manually
+
 Create a folder named `w.w-language-0.0.1` in `$HOME/.vscode/extensions/` and put the files inside.  
 Normally, you just have to reload VS Code.
 
